@@ -136,6 +136,7 @@ table {
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 1px solid #aaa;
 }
 
 body {
@@ -193,9 +194,56 @@ sub {
           filter: brightness(120%);
 }
 
-h1 {
-  padding-bottom: 2000px;
-  font-size: 48px;
+body {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.header {
   text-align: center;
+}
+
+.header__h1 {
+  padding: 89px 0 96px;
+  font-size: 40px;
+}
+
+.header__select {
+  padding: 15px 0 12px;
+  width: 452px;
+  font-size: 20px;
+}
+
+.header__hotZone {
+  margin: 0 auto;
+  padding: 20px 0 18px 26px;
+  width: 800px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px #000000;
+          box-shadow: 0 1px 3px #000000;
+}
+
+.header__hotZone h2 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.header__hotZone__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

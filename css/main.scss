@@ -3,8 +3,30 @@
 @import "mixin"; //Flex、@media
 @import "common";//此專案通用、toTop、按鈕
 
-h1{
-    padding-bottom: 2000px;
-    font-size: $fz-s * 3;
+.header{
     text-align: center;
+    &__h1{
+        padding: 89px 0 96px;
+        font-size: 40px;
+    }
+    &__select{
+        padding: 15px 0 12px;
+        width: 452px;
+        font-size: 20px;
+    }
+    &__hotZone{
+        margin: 0 auto;
+        padding: 20px 0 18px 26px;
+        width: 800px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px #000000;
+        h2{
+            margin-bottom: 14px;
+            font-size: $fz-m;
+            text-align: left;
+        }
+        &__list{
+            @include disFlex;
+        }
+    }
 }

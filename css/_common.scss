@@ -45,13 +45,13 @@
 //   background-color:
 // }
 
-// body {
-//   color: #000;
-//   font-size:
-//   font-weight:
-// }
+body {
+  color: #000;
+  font-size: $fz-s;
+  font-weight: $fw-m;
+}
 
-// .container {
-//   margin: 0 auto;
-//   max-width: 1200px;
-// }
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
