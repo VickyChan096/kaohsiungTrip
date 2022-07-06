@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- toTop Icon -->
-    <script src="https://kit.fontawesome.com/41b7cdd317.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/41b7cdd317.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <title>高雄旅遊網</title>
   </head>
   <body>
@@ -24,16 +27,46 @@
       <div class="header__hotZone">
         <h2>熱門行政區</h2>
         <ul class="header__hotZone__list">
-          <li>苓雅區</li>
-          <li>三民區</li>
-          <li>新興區</li>
-          <li>鹽埕區</li>
+          <li class="distLingya">苓雅區</li>
+          <li class="distSanmin">三民區</li>
+          <li class="distXinxing">新興區</li>
+          <li class="distYancheng">鹽埕區</li>
         </ul>
       </div>
+      <div class="header__divider"><div class="arrow">▼</div></div>
     </header>
-    <main></main>
-    <footer></footer>
-    
+    <main class="main container">
+      <h2 class="main__h2">三民區</h2>
+      <ul class="main__list">
+        <li class="card">
+          <div class="card__photo">
+            <div class="card__photo__zone">
+              <h3>中都愛河濕地公園</h3>
+              <p>三民區</p>
+            </div>
+          </div>
+          <ul class="card__info">
+            <li class="card__info__opentime">
+              <img src="/images/icon/icons_clock.png">
+              <p>全天候開放</p>
+            </li>
+            <li class="card__info__Add">
+              <img src="/images/icon/icons_pin.png">
+              <p>高雄市三民區同盟三路與十全三路交叉處</p>
+            </li>
+            <li class="card__info__Tel">
+              <img src="/images/icon/icons_phone.png">
+              <p>886-7-7995678</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+    <footer class="footer">
+      <p>高雄旅遊網</p>
+      <p class="footer__source">資料來源：高雄市政府</p>
+    </footer>
+
     <!-- JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

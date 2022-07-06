@@ -1,32 +1,159 @@
 @import "variable"; //字級、顏色、速度
 @import "reset"; //Reset、初始設定
 @import "mixin"; //Flex、@media
-@import "common";//此專案通用、toTop、按鈕
+@import "common"; //此專案通用、toTop、按鈕
 
-.header{
-    text-align: center;
-    &__h1{
-        padding: 89px 0 96px;
-        font-size: 40px;
+.header {
+  text-align: center;
+
+  &__h1 {
+    padding: 89px 0 96px;
+    font-size: 40px;
+  }
+
+  &__select {
+    padding: 15px 0 12px;
+    width: 452px;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.70);
+  }
+
+  &__hotZone {
+    margin: 79px auto 49px;
+    padding: 20px 0 18px 26px;
+    width: 800px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px #00000020;
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: $fz-m;
+      text-align: left;
     }
-    &__select{
-        padding: 15px 0 12px;
-        width: 452px;
-        font-size: 20px;
-    }
-    &__hotZone{
-        margin: 0 auto;
-        padding: 20px 0 18px 26px;
-        width: 800px;
+
+    &__list {
+      @include disFlex;
+      font-size: 20px;
+      font-weight: $fw-s;
+      color: #fff;
+
+      li {
+        padding: 11px 34px;
+        margin-right: 23px;
         border-radius: 5px;
-        box-shadow: 0 1px 3px #000000;
-        h2{
-            margin-bottom: 14px;
-            font-size: $fz-m;
-            text-align: left;
-        }
-        &__list{
-            @include disFlex;
-        }
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+
+      .distLingya {
+        background-color: #8A82CC;
+      }
+
+      .distSanmin {
+        background-color: #FFA782;
+      }
+
+      .distXinxing {
+        background-color: #F5D005;
+      }
+
+      .distYancheng {
+        background-color: #559AC8;
+      }
     }
+  }
+
+  &__divider {
+    position: relative;
+    margin: 0 auto 76px;
+    width: 900px;
+    border-bottom: 1px dashed #559AC8;
+  }
+}
+
+.main {
+  text-align: center;
+
+  &__h2 {
+    margin-bottom: 24px;
+    font-size: $fz-m *2;
+    color: #8A82CC;
+  }
+
+  &__list {
+    width: 944px;
+  }
+}
+
+.card {
+  width: 464px;
+  &__info{
+    padding: 18px 0 20px 24px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px #00000020;
+    li{
+      @include disFlex($jc: left);
+      margin-bottom: 16px;
+      img{
+        margin-right: 10px;
+      }
+    }
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__photo {
+    position: relative;
+    height: 155px;
+    color: #fff;
+    background-image: url(https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E4%B8%89%E6%B0%91%E5%8D%80/%E4%B8%AD%E9%83%BD%E6%BF%95%E5%9C%B0%E5%85%AC%E5%9C%9207.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__zone {
+      @include disFlex($jc: space-between);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.54) 100%);
+
+      h3 {
+        padding: 14px 0 14px 24px;
+        font-size: 24px;
+      }
+
+      p {
+        padding: 24px 19px 11px 0;
+      }
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: -12px;
+  left: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  color: #559AC8;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #559AC8;
+}
+
+.footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: #559AC8;
+
+  &__source {
+    color: #FFD366;
+  }
 }

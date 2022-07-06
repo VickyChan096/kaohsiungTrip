@@ -141,12 +141,13 @@ table {
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: 1px solid #aaa;
+  // outline: 1px solid #aaa;
 }
 
 body {
   font-family: Helvetica, Arial, 'Noto Sans TC', sans-serif;
   line-height: 1.5;
+  background-color: #f7f7f7;
 }
 
 img {
