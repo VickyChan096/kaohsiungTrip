@@ -28,13 +28,11 @@
 
     <header class="header container">
       <h1 class="header__h1">高雄旅遊資訊</h1>
-      <select class="header__select" name="" id="">
+      <select class="header__select" name="zone" id="selectZone">
         <optgroup label="請選擇行政區">請選擇行政區</optgroup>
         <option value="苓雅區">苓雅區</option>
         <option value="三民區">三民區</option>
-        <option value="鹽埕區">鹽埕區</option>
         <option value="美濃區">美濃區</option>
-        <option value="大樹區">大樹區</option>
         <option value="小港區">小港區</option>
         <option value="大樹區">大樹區</option>
         <option value="六龜區">六龜區</option>
@@ -58,28 +56,29 @@
       </select>
       <div class="header__hotZone">
         <h2>熱門行政區</h2>
-        <ul class="header__hotZone__list">
+        <ul class="header__hotZone__list" id="hotZone">
           <li class="distLingya">苓雅區</li>
           <li class="distSanmin">三民區</li>
           <li class="distDashu">大樹區</li>
-          <li class="distYancheng">鹽埕區</li>
+          <li class="distZuoying">左營區</li>
         </ul>
       </div>
       <div class="header__divider"><div class="arrow">▼</div></div>
     </header>
     <main class="main container">
-      <h2 class="main__h2">三民區</h2>
+      <h2 class="main__h2">苓雅區</h2>
       <ul class="main__list">
         <li class="card">
-          <div class="card__photo">
+          <div
+            class="card__photo"
+            style="
+              background-image: url(https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E8%8B%93%E9%9B%85%E5%8D%80/%E5%85%89%E6%A6%AE%E7%A2%BC%E9%A0%AD%E8%88%B9%E9%9A%BB.jpg);
+            "
+          >
             <div class="card__photo__zone">
-              <h3>中都愛河濕地公園</h3>
-              <p>三民區</p>
+              <h3>光榮碼頭</h3>
+              <p>苓雅區</p>
             </div>
-          </div>
-          <div class="card__free">
-            <img src="images/icon/icons_tag.png" />
-            <p>免費參觀</p>
           </div>
           <ul class="card__info">
             <li class="card__info__opentime">
@@ -88,37 +87,77 @@
             </li>
             <li class="card__info__Add">
               <img src="images/icon/icons_pin.png" />
-              <p>高雄市三民區同盟三路與十全三路交叉處</p>
+              <p>高雄市苓雅區海邊路與新田路口</p>
             </li>
             <li class="card__info__Tel">
               <img src="images/icon/icons_phone.png" />
               <p>886-7-7995678</p>
+            </li>
+            <li class="card__free">
+              <img src="images/icon/icons_tag.png" />
+              <p>免費參觀</p>
             </li>
           </ul>
         </li>
         <li class="card">
-          <div class="card__photo">
+          <div
+            class="card__photo"
+            style="
+              background-image: url(https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E8%8B%93%E9%9B%85%E5%8D%80/%E9%AB%98%E9%9B%84%E6%B8%85%E7%9C%9F%E5%AF%BA.jpg);
+            "
+          >
             <div class="card__photo__zone">
-              <h3>中都愛河濕地公園</h3>
-              <p>三民區</p>
+              <h3>高雄清真寺</h3>
+              <p>苓雅區</p>
             </div>
-          </div>
-          <div class="card__free">
-            <img src="images/icon/icons_tag.png" />
-            <p>免費參觀</p>
           </div>
           <ul class="card__info">
             <li class="card__info__opentime">
               <img src="images/icon/icons_clock.png" />
-              <p>全天候開放</p>
+              <p>每日09:00-20:30</p>
             </li>
             <li class="card__info__Add">
               <img src="images/icon/icons_pin.png" />
-              <p>高雄市三民區同盟三路與十全三路交叉處</p>
+              <p>高雄市苓雅區建軍路11號</p>
             </li>
             <li class="card__info__Tel">
               <img src="images/icon/icons_phone.png" />
-              <p>886-7-7995678</p>
+              <p>886-7-7496812</p>
+            </li>
+            <li class="card__free">
+              <img src="images/icon/icons_tag.png" />
+              <p>免費參觀</p>
+            </li>
+          </ul>
+        </li>
+        <li class="card">
+          <div
+            class="card__photo"
+            style="
+              background-image: url(https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E8%8B%93%E9%9B%85%E5%8D%80/%E9%AB%98%E9%9B%84%E9%97%9C%E5%B8%9D%E5%BB%9F.jpg);
+            "
+          >
+            <div class="card__photo__zone">
+              <h3>高雄關帝廟(武廟)</h3>
+              <p>苓雅區</p>
+            </div>
+          </div>
+          <ul class="card__info">
+            <li class="card__info__opentime">
+              <img src="images/icon/icons_clock.png" />
+              <p>每日06:00-23:00</p>
+            </li>
+            <li class="card__info__Add">
+              <img src="images/icon/icons_pin.png" />
+              <p>高雄市苓雅區武廟路52號</p>
+            </li>
+            <li class="card__info__Tel">
+              <img src="images/icon/icons_phone.png" />
+              <p>886-7-7218782</p>
+            </li>
+            <li class="card__free">
+              <img src="images/icon/icons_tag.png" />
+              <p>免費參觀</p>
             </li>
           </ul>
         </li>

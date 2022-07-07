@@ -1647,8 +1647,88 @@ $(function () {
   });
 });
 
-console.log(data.length)
-for(let i=0; i<data.length; i++){
-  let zone = data[i].Zone;
-  console.log(zone);
+let selectZone = document.getElementById('selectZone');
+let hotZone = document.querySelector('#hotZone');
+
+function showList(e) {
+  let select = document.getElementById('selectZone').value;
+  let list = document.querySelector('.main__list');
+  let str = '';
+  for (let i = 0; i < data.length; i++) {
+    if (select === data[i].Zone) {
+      let content = `<li class="card">
+          <div class="card__photo" style="background-image: url(${data[i].Picture1});">
+            <div class="card__photo__zone">
+              <h3>${data[i].Name}</h3>
+              <p>${data[i].Zone}</p>
+            </div>
+          </div>
+          <ul class="card__info">
+            <li class="card__info__opentime">
+              <img src="images/icon/icons_clock.png" />
+              <p>${data[i].Opentime}</p>
+            </li>
+            <li class="card__info__Add">
+              <img src="images/icon/icons_pin.png" />
+              <p>${data[i].Add}</p>
+            </li>
+            <li class="card__info__Tel">
+              <img src="images/icon/icons_phone.png" />
+              <p>${data[i].Tel}</p>
+            </li>
+            <li class="card__free">
+              <img src="images/icon/icons_tag.png" />
+              <p>${data[i].Ticketinfo}</p>
+            </li>
+          </ul>
+        </li>`;
+      str += content;
+    }
+    list.innerHTML = str;
+  }
+  let mainH2 = document.querySelector('.main__h2');
+  mainH2.textContent = select;
 }
+
+function showListHotZone(e) {
+  let select = e.target.textContent;
+  let list = document.querySelector('.main__list');
+  let str = '';
+  for (let i = 0; i < data.length; i++) {
+    if (select === data[i].Zone) {
+      let content = `<li class="card">
+          <div class="card__photo" style="background-image: url(${data[i].Picture1});">
+            <div class="card__photo__zone">
+              <h3>${data[i].Name}</h3>
+              <p>${data[i].Zone}</p>
+            </div>
+          </div>
+          <ul class="card__info">
+            <li class="card__info__opentime">
+              <img src="images/icon/icons_clock.png" />
+              <p>${data[i].Opentime}</p>
+            </li>
+            <li class="card__info__Add">
+              <img src="images/icon/icons_pin.png" />
+              <p>${data[i].Add}</p>
+            </li>
+            <li class="card__info__Tel">
+              <img src="images/icon/icons_phone.png" />
+              <p>${data[i].Tel}</p>
+            </li>
+            <li class="card__free">
+              <img src="images/icon/icons_tag.png" />
+              <p>${data[i].Ticketinfo}</p>
+            </li>
+          </ul>
+        </li>`;
+      str += content;
+    }
+    list.innerHTML = str;
+  }
+  let mainH2 = document.querySelector('.main__h2');
+  mainH2.textContent = select;
+}
+
+selectZone.addEventListener('change', showList);
+hotZone.addEventListener('click', showListHotZone);

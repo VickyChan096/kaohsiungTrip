@@ -101,7 +101,7 @@
         background-color: #F5D005;
       }
 
-      .distYancheng {
+      .distZuoying {
         background-color: #559AC8;
       }
     }
@@ -132,6 +132,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 944px;
@@ -143,7 +144,6 @@
 }
 
 .card {
-  position: relative;
   margin-bottom: 46px;
   width: 464px;
 
@@ -151,27 +151,18 @@
     width: 100%;
   }
 
-
-  &__free {
-    @include disFlex;
-    position: absolute;
-    bottom: 19px;
-    right: 20px;
-
-    img {
-      margin-right: 8px;
-    }
-  }
-
   &__info {
+    height: 220px;
     padding: 18px 24px 20px 24px;
     text-align: left;
     background-color: #fff;
     box-shadow: 0 4px 8px #00000020;
+    @include pad{
+      height: auto;
+    }
 
     @include mobile {
       padding: 18px 12px 20px 12px;
-
     }
 
     li {
@@ -192,7 +183,6 @@
     position: relative;
     height: 155px;
     color: #fff;
-    background-image: url(https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E4%B8%89%E6%B0%91%E5%8D%80/%E4%B8%AD%E9%83%BD%E6%BF%95%E5%9C%B0%E5%85%AC%E5%9C%9207.jpg);
     background-size: cover;
     background-position: center;
 

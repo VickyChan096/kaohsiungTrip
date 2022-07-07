@@ -305,7 +305,7 @@ body {
   background-color: #F5D005;
 }
 
-.header__hotZone__list .distYancheng {
+.header__hotZone__list .distZuoying {
   background-color: #559AC8;
 }
 
@@ -340,6 +340,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
@@ -353,7 +356,6 @@ body {
 }
 
 .card {
-  position: relative;
   margin-bottom: 46px;
   width: 464px;
 }
@@ -364,31 +366,19 @@ body {
   }
 }
 
-.card__free {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  bottom: 19px;
-  right: 20px;
-}
-
-.card__free img {
-  margin-right: 8px;
-}
-
 .card__info {
+  height: 220px;
   padding: 18px 24px 20px 24px;
   text-align: left;
   background-color: #fff;
   -webkit-box-shadow: 0 4px 8px #00000020;
           box-shadow: 0 4px 8px #00000020;
+}
+
+@media only screen and (max-width: 992px) {
+  .card__info {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -422,7 +412,6 @@ body {
   position: relative;
   height: 155px;
   color: #fff;
-  background-image: url(https://raw.githubusercontent.com/hexschool/KCGTravel/master/image/%E4%B8%89%E6%B0%91%E5%8D%80/%E4%B8%AD%E9%83%BD%E6%BF%95%E5%9C%B0%E5%85%AC%E5%9C%9207.jpg);
   background-size: cover;
   background-position: center;
 }
