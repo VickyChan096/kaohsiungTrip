@@ -1648,3 +1648,7 @@ $(function () {
 });
 
 console.log(data.length)
+for(let i=0; i<data.length; i++){
+  let zone = data[i].Zone;
+  console.log(zone);
+}
