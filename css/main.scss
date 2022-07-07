@@ -3,11 +3,20 @@
 @import "mixin"; //Flex、@media
 @import "common"; //此專案通用、toTop、按鈕
 
+.heroBanner{
+  position:absolute;
+  z-index: -1;
+  width: 100%;
+  height: 380px;
+  background-image: url(../images/icon/bg.png);
+  background-size: cover;
+}
 .header {
   text-align: center;
 
   &__h1 {
-    padding: 89px 0 96px;
+    padding: 80px 0 90px;
+    color: #fff;
     font-size: 40px;
   }
 
@@ -21,7 +30,7 @@
   }
 
   &__hotZone {
-    margin: 79px auto 49px;
+    margin: 70px auto 49px;
     padding: 20px 0 18px 26px;
     width: 800px;
     border-radius: 5px;
@@ -78,6 +87,7 @@
 
 .main {
   text-align: center;
+  margin-bottom: 33px;
 
   &__h2 {
     margin-bottom: 24px;
@@ -86,27 +96,49 @@
   }
 
   &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
     width: 944px;
   }
 }
 
 .card {
+  position: relative;
+  margin-bottom: 46px;
   width: 464px;
-  &__info{
+
+  &__free {
+    @include disFlex;
+    position: absolute;
+    bottom: 19px;
+    right: 20px;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__info {
     padding: 18px 0 20px 24px;
     background-color: #fff;
     box-shadow: 0 4px 8px #00000020;
-    li{
+
+    li {
       @include disFlex($jc: left);
       margin-bottom: 16px;
-      img{
+
+      img {
         margin-right: 10px;
       }
     }
-    li:last-child{
+
+    li:last-child {
       margin-bottom: 0;
     }
   }
+
   &__photo {
     position: relative;
     height: 155px;
@@ -141,9 +173,34 @@
   width: 24px;
   height: 24px;
   color: #559AC8;
-  background-color: #fff;
+  background-color: #f7f7f7;
   border-radius: 50%;
   border: 1px solid #559AC8;
+}
+
+.page {
+  @include disFlex;
+  margin-bottom: 40px;
+  font-size: 14px;
+
+  &__prevNext {
+    padding: 8px;
+    margin: 0 18px;
+    color: rgba(74, 74, 74, 0.50);
+    cursor: pointer;
+  }
+
+  &__number {
+    @include disFlex;
+    li{
+      padding: 8px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .footer {

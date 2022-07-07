@@ -136,6 +136,7 @@ table {
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 1px solid #aaa;
 }
 
 body {
@@ -205,12 +206,22 @@ body {
   max-width: 1024px;
 }
 
+.heroBanner {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 380px;
+  background-image: url(../images/icon/bg.png);
+  background-size: cover;
+}
+
 .header {
   text-align: center;
 }
 
 .header__h1 {
-  padding: 89px 0 96px;
+  padding: 80px 0 90px;
+  color: #fff;
   font-size: 40px;
 }
 
@@ -224,7 +235,7 @@ body {
 }
 
 .header__hotZone {
-  margin: 79px auto 49px;
+  margin: 70px auto 49px;
   padding: 20px 0 18px 26px;
   width: 800px;
   border-radius: 5px;
@@ -289,6 +300,7 @@ body {
 
 .main {
   text-align: center;
+  margin-bottom: 33px;
 }
 
 .main__h2 {
@@ -298,11 +310,41 @@ body {
 }
 
 .main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
   width: 944px;
 }
 
 .card {
+  position: relative;
+  margin-bottom: 46px;
   width: 464px;
+}
+
+.card__free {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 19px;
+  right: 20px;
+}
+
+.card__free img {
+  margin-right: 8px;
 }
 
 .card__info {
@@ -375,9 +417,52 @@ body {
   width: 24px;
   height: 24px;
   color: #559AC8;
-  background-color: #fff;
+  background-color: #f7f7f7;
   border-radius: 50%;
   border: 1px solid #559AC8;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.page__prevNext {
+  padding: 8px;
+  margin: 0 18px;
+  color: rgba(74, 74, 74, 0.5);
+  cursor: pointer;
+}
+
+.page__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page__number li {
+  padding: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.page__number li:last-child {
+  margin-right: 0;
 }
 
 .footer {
